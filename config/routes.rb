@@ -4,8 +4,13 @@ Rails.application.routes.draw do
  
   namespace :admin do
     root to: "home#index"
-
     resources :admins
     #cria todas as rotas do admin
 end
+
+root to: "user/timeline#index"
+
+  namespace :user do
+
+  end
 end
