@@ -1,4 +1,4 @@
-<div style="height: 100%!important;background-image: url('<%= resource_name == :admin ? image_path('login_bg.jpg') : image_path('login_bg2.jpeg') %>'); background-size: cover">
+<div style="height: 150%!important;background-image: url('<%= resource_name == :admin ? image_path('login_bg.jpg') : image_path('login_bg2.jpeg') %>'); background-size: cover">
   <div class="offset-4 col-4 authentication-inner py-5">
     <div class="card">
       <div class="p-4 p-sm-5">
@@ -31,7 +31,7 @@
             <%= f.submit 'Entrar', class: "btn btn-primary" %>
           </div>
         <% end %>
-        
+
         <% if resource_name == :user %>
           <%= link_to new_user_registration_path, class: "d-flex justify-content-center align-items-center mt-4" do %>
             Cadastrar
