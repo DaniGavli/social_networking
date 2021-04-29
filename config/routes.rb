@@ -13,6 +13,7 @@ end
 root to: "user/timeline#index"
 
   namespace :user do
+    
     get 'profile', to: "profile#show"
     resources :posts, only: :create
 
