@@ -28,7 +28,7 @@ RSpec.describe Subscription, type: :model do
     expect(bob.followers).to include donald
 
     expect(donald.following.count).to eql 1
-    expect(donald.following).to include bob
+    expect(donald.following).to include bob 
 
 
 end
