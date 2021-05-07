@@ -5,9 +5,9 @@ class User::PostsController < UserController
     f_params = form_params.merge(user: current_user)
 
     @post = Post.new(f_params)
+    @comment = Comment.new
 
     if @post.save
-
       redirect_to user_profile_path
     else
       render "user/profile/show"
@@ -33,11 +33,12 @@ class User::PostsController < UserController
       respond_to {|format| format.json { render json: {liked: true, likesCount: post.likes.count}}}
     end
   end
-  
+
   private
 
   def form_params
     params.require(:post).permit(:body)
   end
+
 end
 
